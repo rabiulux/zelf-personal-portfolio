@@ -1,0 +1,32 @@
+// GLOBAL MIXINS
+
+
+=center($top_val, $left_val, $translateX, $tanslateY)
+  top: $top_val
+  left: $left_val
+  -moz-transform: translate($translateX, $tanslateY)
+  -webkit-transform: translate($translateX, $tanslateY)
+  -o-transform: translate($translateX, $tanslateY)
+  -ms-transform: translate($translateX, $tanslateY)
+  transform: translate($translateX, $tanslateY)
+
+=transition_r($transition_time, $transition_type)
+  -webkit-transition: all $transition_time $transition_type //(0.5s, ease-in)
+  -moz-transition: all $transition_time $transition_type
+  -ms-transition: all $transition_time $transition_type
+  -o-transition: all $transition_time $transition_type
+  transition: all $transition_time $transition_type
+
+=transform_r($reqd_degree)
+  -webkit-transform: rotate($reqd_degree)
+  -ms-transform:     rotate($reqd_degree)
+  transform:         rotate($reqd_degree)
+
+=transform_X($reqd_X)
+  -webkit-transform: translate($reqd_X)
+  -ms-transform:     translate($reqd_X)
+  transform:         translate($reqd_X)
+
+=box_shadow($val1, $val2, $val3, $val4, $kalar)
+  -webkit-box-shadow:   $val1 $val2 $val3 $val4 $kalar
+  box-shadow:           $val1 $val2 $val3 $val4 $kalar

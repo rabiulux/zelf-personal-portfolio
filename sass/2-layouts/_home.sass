@@ -1,0 +1,734 @@
+/*Preloader*/
+.load-wrapp
+  position: fixed
+  width: 100%
+  height: 100%
+  background: #fff
+  color: #fff
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  z-index: 99999
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+
+.load-wrapp .wrap
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+
+.load-wrapp .wrap ul.dots-box
+  position: relative
+  width: 80px
+  height: 80px
+  list-style: none
+
+.load-wrapp .wrap ul.dots-box li.dot
+  width: 100%
+  height: 100%
+  border-radius: 52px
+  top: 0
+  left: 0
+  z-index: 99
+  text-indent: -9999px
+  display: block
+  position: absolute
+  border: none
+
+.load-wrapp .wrap ul.dots-box li.dot span
+  background: #b87333
+  bottom: 0px
+  left: 50%
+  margin-left: -2px
+  display: block
+  position: absolute
+  width: 10px
+  height: 10px
+  border-radius: 10px
+
+.load-wrapp .wrap ul.dots-box li.dot
+  animation-iteration-count: infinite
+  animation-timing-function: linear
+  animation-name: orbit
+  animation-duration: 4s
+
+.load-wrapp .wrap ul.dots-box li:nth-child(2)
+  animation-delay: 0.2s
+
+.load-wrapp .wrap ul.dots-box li:nth-child(3)
+  animation-delay: 0.4s
+
+.load-wrapp .wrap ul.dots-box li:nth-child(4)
+  animation-delay: 0.6s
+
+.load-wrapp .wrap ul.dots-box li:nth-child(5)
+  animation-delay: 0.8s
+
+@keyframes orbit
+  0%
+    transform: rotate(0deg)
+    opacity: 1
+
+  5%
+    transform: rotate(90deg)
+    opacity: 1
+
+  45%
+    transform: rotate(270deg)
+    opacity: 1
+
+  55%
+    transform: rotate(540deg)
+    opacity: 1
+
+  75%
+    transform: rotate(630deg)
+    opacity: 1
+
+  80%
+    transform: rotate(720deg)
+    opacity: 0
+
+  100%
+    transform: rotate(720deg)
+    opacity: 0
+
+/* Hero Section */
+.hero
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url(../img/hero.jpg)
+  background-repeat: no-repeat, no-repeat,
+  background-position: center center, center bottom
+  background-size: 100%, auto 100vh
+  background-color: rgba(0, 0, 0, 1)
+  min-height: 100vh
+  width: 100%
+  display: flex
+  align-items: center
+  .content
+    text-align: left
+    z-index: 1
+    h6
+      color: #aaa
+      letter-spacing: 3px
+    h1
+      color: #eee
+      font-size: 48px
+      font-family: $sans-serif
+      font-weight: 700
+      margin-bottom: 20px
+      span
+        color: $brand-primary
+  p
+    width: 50%
+    height: auto
+    margin-top: 5px
+    margin-bottom: 30px
+    color: #aaa
+  &::after
+    content: ""
+    position: absolute
+    bottom: -40px
+    left: 0
+    z-index: 1
+    width: 100%
+    height: 100px
+    background: transparent
+    background-size: 100% 100%
+    background-image: url(../img/bottom-color.png)
+
+.scroll_down
+  i
+    position: absolute
+    bottom: 75px
+    -webkit-animation: bounce 2s infinite
+    animation: bounce 2s infinite
+    height: 50px
+    width: 30px
+    margin: 40px
+    line-height: 60px
+    border-radius: 30px
+    border: 1px solid #ffffff
+    display: inline-block
+    color: #fff
+    font-size: 14px
+    text-align: center
+    z-index: 1
+
+#particles-js
+    width: 100%
+    height: 100%
+    position: absolute
+    opacity: 0.2
+    overflow: hidden
+
+/* About US Section */
+.about
+  background: #f7f7f7
+  .content
+    position: relative
+  .about_iamge
+    height: 500px
+    width: 515px
+    // padding: 0px 5px 5px
+    border-right: 10px solid #aaa
+    border-bottom: 10px solid #aaa
+    box-sizing: border-box
+    position: relative
+    margin-bottom: 50px
+    img
+      position: absolute
+      top: -5px
+      height: auto
+      width: 450px
+  .details
+    h6
+      display: flex
+      font-size: 1rem
+      color: #444
+      text-align: left
+    h3
+      font-size: 1.75rem
+      margin-bottom: 1rem!important
+      color: $brand-primary
+    ul
+      text-align: left
+      padding-left: 0
+      list-style: none
+      li:not(:last-child)::after
+        content: ""
+        height: 3px
+        width: 3px
+        border-radius: 50%
+        background-color: #757575
+        margin: 0px 12px
+        position: relative
+        display: inline-block
+        top: -3px
+    .skills
+      .part-skills
+        position: relative
+        .skills-item
+          position: relative
+          width: 100%
+          margin-bottom: 30px
+          h5
+            position: relative
+            font-size: 18px
+            font-family: roboto
+            font-weight: 300
+            margin-bottom: 10px
+            margin-top: 20px
+          .bar
+            position: relative
+            width: 100%
+            height: 8px
+            background-color: #ccc
+            border-radius: 20px
+            .fill
+              position: absolute
+              width: 0
+              height: 100%
+              background-color: #b87333
+              border-radius: 20px
+              -webkit-transition: all 3s
+              transition: all 2s
+              &::before
+                content: attr(data-width)
+                position: absolute
+                top: -30px
+                right: -15px
+                color: $font-color
+                font-size: 12px
+                font-weight: 600
+              &::after
+                content: ""
+                width: 0
+                height: 0
+                border-left: 6px solid transparent
+                border-right: 6px solid transparent
+                border-top: 10px solid #b87333
+                position: absolute
+                top: -12px
+                right: -4px
+    .social
+      span
+        color: #555
+        margin-right: 8px
+      i
+        margin-right: 10px
+      a i.fab
+        color: #555
+        display: inline-block
+        &:hover
+          color: $brand-primary
+
+/* Services Section */
+.services
+  background: #f9f9f9
+  z-index: 2
+  .service_item
+    height: auto
+    width: 100%
+    text-align: center
+    padding: 30px 20px
+    margin-bottom: 30px
+    position: relative
+    border: 1px solid #aaa
+    border-radius: 3px
+    background: #fff
+    +box_shadow(0px, 1px, 2px, 4px, #eee)
+    +transition_r(0.5s, ease-in)
+    .icon
+      position: relative
+      text-align: center
+      margin: 10px auto
+      height: 60px
+      width: 60px
+      background: $brand-primary
+      border-radius: 50%
+      border: 3px solid $brand-primary
+      +transition_r(0.5s, ease-in)
+      .fas, .fab
+        font-size: 30px
+        color: #fff
+        position: absolute
+        +center(50%, 50%, -50%, -50%)
+        +transition_r(0.5s, ease-in)
+    &:hover
+      background: $brand-primary
+      color: #fff
+    &:hover .icon
+      color: $brand-primary
+      background: #fff
+      // border: 3px solid #fff
+    &:hover .fab, &:hover .fas
+      color: $brand-primary
+    h4
+      color: $brand-dark
+    &:hover h4, &:hover p
+      color: #fff
+
+/* Portfolio Section */
+.portfolio
+  height: auto
+  width: 100%
+  background: #fff
+  position: relative
+  z-index: 2
+
+.filter
+  position: relative
+  z-index: 3
+
+.js-radio-button-group .button
+  display: inline-block
+  padding: 5px 15px
+  background: transparent
+  border: none
+  border-radius: 0px
+  color: #555
+  line-height: 1.5
+  outline: none
+  text-transform: uppercase
+  box-sizing: border-box
+  cursor: pointer
+  &:active
+    border-bottom: 3px solid $brand-primary !important
+  &:hover
+    border-bottom: 3px solid $brand-primary !important
+
+.button:active,
+.button.is-checked
+  color: $brand-dark
+  border-bottom: 3px solid $brand-primary !important
+
+.button.is-checked
+  color: $brand-dark
+  text-shadow: 0 -1px hsla(0, 0%, 0%, 0.8)
+
+.grid
+  position: relative
+  box-sizing: border-box
+  padding: 0px
+  margin-left: auto
+  margin-right: auto
+  &::after
+    content: ''
+    display: block
+    clear: both   /* clear fix */
+  .element-item
+    position: relative
+    float: left
+    width: 330px
+    height: auto
+    box-sizing: border-box
+    margin: 15px
+    padding: 0px
+    overflow: hidden
+    img
+      +transition_r(0.6s, ease-in)
+      width: 100%
+      height: auto
+      overflow: hidden
+    &:hover img
+      transform: scale(1.05)
+    .img_overlay
+      width: 95%
+      height: 95%
+      position: absolute
+      +center(50%, 50%, -50%, -50%)
+      +transition_r(0.5s, linear)
+      background: rgba(0, 0, 0, 0.1)
+      border: 1px solid rgba(255, 255, 255, 0.3)
+      color: #fff
+      text-align: center
+      padding-top: 100px
+      line-height: 3
+      overflow: hidden
+      .img_content
+        opacity: 0
+        +transition_r(0.5s, linear)
+        h5
+          color: #fff
+        p
+          color: #ccc
+    &:hover .img_overlay
+      background: rgba(0, 0, 0, 0.8)
+      border: 1px solid rgba(255, 255, 255, 0.8)
+      opacity: 0.75
+      line-height: 1
+      padding: 10px
+    &:hover .img_overlay .img_content
+      opacity: 1
+
+
+.portfolio_link, .portfolio_view
+  opacity: 0
+  display: inline-block
+  float: left
+  position: absolute
+  bottom: -30px
+  +transition_r(0.5s, linear)
+  .btn
+    border: none
+    margin: 0
+
+.portfolio_link .fas, .portfolio_view .fas
+  // opacity: 0.5
+  padding: 12px
+  background: #929292
+  text-align: center
+  color: #fff
+  +transition_r(0.1s, linear)
+  &:hover
+    background: #5f5f5f
+
+.grid .element-item:hover .portfolio_link, .grid .element-item:hover .portfolio_view
+  opacity: 1
+  bottom: 30px
+
+.portfolio_link
+  left: 30%
+
+.portfolio_view
+  right: 30%
+
+.modal
+  position: fixed
+  top: 80px
+  z-index: 1
+  .modal-dialog
+    z-index: 12
+    color: $brand-primary
+    .modal-content
+      position: relative
+      z-index: 100
+  &::after
+    content: ''
+    height: 100vh
+    width: 100vw
+    background: rgba(0, 0, 0, 0.7)
+    position: fixed
+    left: 0
+    top: 0
+    z-index: -1
+  // Portfolio Image
+
+.modal-backdrop
+  width: 0
+  height: 0
+
+.element-item > *
+  margin: 0
+  padding: 0
+
+/* Testimonial Section*/
+.testimonial
+  background-color: $brand-light
+  width: 100%
+  height: auto
+  position: relative
+  z-index: 1
+  .item
+    text-align: center
+    padding: 50px
+    margin-bottom: 80px
+    opacity: .2
+    -webkit-transform: scale3d(0.8, 0.8, 1)
+    transform: scale3d(0.8, 0.8, 1)
+    transition: all 0.3s ease-in-out
+    .shadow-effect
+      min-height: 300px
+      background: #fff
+      padding: 20px
+      border-radius: 4px
+      text-align: center
+      border: 1px solid $brand-primary
+      box-shadow: 0 19px 38px rgba(0,0,0,0.1), 0 15px 12px rgba(0,0,0,0.05)
+      .img-circle
+        border-radius: 50%
+      p
+        font-family: inherit
+        font-size: 17px
+        line-height: 1.5
+        margin: 0 0 17px 0
+        font-weight: 300
+    .testimonial-name
+      margin: -17px auto 0
+      display: table
+      width: auto
+      background: $brand-primary
+      padding: 9px 35px
+      border-radius: 12px
+      text-align: center
+      color: #fff
+      box-shadow: 0 9px 18px rgba(0,0,0,0.10), 0 5px 7px rgba(0,0,0,0.05)
+
+#customers-testimonials .owl-item.active.center .item
+  opacity: 1
+  -webkit-transform:  scale3d(1.0, 1.0, 1)
+  transform:          scale3d(1.0, 1.0, 1)
+
+.owl-carousel .owl-item img
+  -webkit-transform-style:  preserve-3d
+  transform-style:          preserve-3d
+  max-width: 90px
+  margin: 0 auto 17px
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span,
+#customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span
+  background: $brand-primary
+  -webkit-transform:  translate3d(0px, -50%, 0px) scale(0.7)
+  transform:          translate3d(0px, -50%, 0px) scale(0.7)
+
+#customers-testimonials.owl-carousel .owl-dots
+  display: inline-block
+  width: 100%
+  text-align: center
+  .owl-dot
+    display: inline-block
+    span
+      background: #666
+      display: inline-block
+      height: 20px
+      margin: 0 2px 5px
+      border-radius: 50%
+      -webkit-transform:  translate3d(0px, -50%, 0px) scale(0.3)
+      transform:          translate3d(0px, -50%, 0px) scale(0.3)
+      -webkit-transform-origin:   50% 50% 0
+      transform-origin:           50% 50% 0
+      transition: all 250ms ease-out 0s
+      width: 20px
+
+/* Counter Section */
+.statistics
+  height: auto
+  width: 100%
+  /* Create the parallax scrolling effect */
+  background-image: linear-gradient(rgba(0,0,0, 0.5), rgba(0,0,0, 0.6)), url(../img/bg_para.jpg)
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  margin: 0
+  position: relative
+  .item
+    height: auto
+    width: 100%
+    background: rgba(0, 0, 0, 0.5)
+    padding: 10px
+    border-radius: 5px
+    .counter_bg
+      padding: 60px 0px
+      text-align: center
+      color: $brand-light
+      border: 1px solid rgba(255, 255, 255, 0.2)
+      background: rgba(0, 0, 0, 0.2)
+      .counter_icon
+        .far, .fas
+          font-size: 36px
+          margin-bottom: 10px
+          color: $brand-primary
+      .counter_figure
+        .counter
+          color: $brand-light
+          opacity: 1
+          font-size: 40px
+          position: relative
+          z-index: 100
+        .counter_text
+          font-size: 18px
+          text-align: center
+          color: $brand-light
+
+/* Blog Section */
+.blog
+  background: #f9f9f9
+  .item
+    height: auto
+    width: 100%
+    box-sizing: border-box
+    overflow: hidden
+    padding: 0px
+    margin-bottom: 30px
+    border-radius: 5px
+    border: 1px solid rgba(0, 0, 0, 0.15)
+    background: #fff
+    position: relative
+    +transition_r(.3s, ease-in)
+    +box_shadow(0px, 2px, 9.5px, 0.5px, rgba(219, 219, 219, 0.3))
+    &:hover
+      +box_shadow(0px, 8px, 16px, 1px, rgba(219, 219, 219, 1.0))
+    .image
+      position: relative
+      overflow: hidden
+      img
+        +transition_r(.5s, ease-in)
+      .tag
+        height: auto
+        width: 100%
+        position: absolute
+        bottom: 0px
+        left: 0px
+        font-size: 18px
+        color: $brand-light
+        background: linear-gradient(to right, rgba(184, 115, 51, 1), rgba(184, 115, 51, 0))
+        padding: 5px 10px
+    &:hover img
+      transform: scale(1.05)
+    .item_body
+      padding: 15px
+      position: relative
+      h5
+        padding: 10px 0px
+        font-weight: 600
+        line-height: 1.5
+        letter-spacing: 2px
+        a
+          color: #454545
+          font-style: none
+          +transition_r(0.5s, ease-in-out)
+          &:hover
+            color: $brand-primary
+      .blog_details
+        color: #777
+        span
+          color: #333
+          font-weight: 600
+          padding-right: 2px
+      p
+        font-size: 14px
+    .blog_footer
+      height: auto
+      width: 100%
+      background: rgba(0, 0, 0, 0.08)
+      padding: 10px
+      border-top: 1px solid rgba(0, 0, 0, 0.1)
+      box-sizing: border-box
+      display: flex
+      position: relative
+      bottom: 0px
+      .comments
+        position: relative
+        float: left
+        a
+          color: $font-color
+      .views
+        position: relative
+        float: left
+        padding: 0px 20px
+      .share
+        padding: 0px 10px
+        position: relative
+        margin-left: auto
+        a
+          color: $font-color
+
+/* Contact section */
+section#contact
+  padding-bottom: 0
+.contact
+  background: rgba(0, 0, 0, 0.10)
+  padding-bottom: 0
+  .info
+    padding-top: 30px
+    background-image: url(../img/map.png)
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center center
+    .item
+      word-wrap: break-word
+      margin-bottom: 30px
+      font-size: 15px
+      color: #8f8f8f
+      line-height: 1.8
+      h6
+        color: $brand-primary
+        margin-bottom: 5px
+        font-size: 12px
+        font-weight: 400
+        text-transform: uppercase
+        letter-spacing: 2px
+      p, address
+        font-size: 15px
+        color: #454545
+        line-height: 1.8
+        margin: 0
+  /* Contact us form */
+  form
+    .form-control
+      background-color: $brand-light
+      color: $brand-light
+    input, textarea
+      color: $font-color
+      font-weight: 400
+      font-size: 14px
+      line-height: 18px
+      width: 100%
+      padding: 15px
+      border: 0
+      background-color: $brand-light
+      outline: none !important
+      box-sizing: border-box
+    input
+      border-radius: 5px
+      background-color: $brand-light
+    textarea
+      height: 160px
+      max-height: 160px
+      max-width: 100%
+      border-radius: 5px
+    .my_button
+      background: $brand-light
+      &:hover
+        background: transparent
+
+#map
+  iframe
+    padding: 0px!important
+    margin: 0px!important
+    box-sizing: border-box

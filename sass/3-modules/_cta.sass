@@ -1,0 +1,40 @@
+/*Call To Action Section */
+.call_to_action
+  width: 100%
+  height: auto
+  position: absolute
+  bottom: -150px
+  left: 0
+  z-index: 50
+  background: $brand-primary
+  border-radius: 5px
+  line-height: 1.5
+  padding: 15px 15px 20px 15px
+  text-align: center
+  +transition_r(0.4s, ease-in-out)
+  +box_shadow(0px, 8px, 16px, 1px, rgba(0, 0, 0, 0.1))
+  a
+    text-decoration: none!important
+    font-size: 28px
+    font-weight: 700
+    color: $brand-light
+    .fas
+      color: #fff
+      padding-right: 10px
+    .click_here
+      text-decoration: underline
+      color: $brand-primary
+      background: #fafafa
+      padding: 15px 10px
+      margin-left: 5px
+      border-radius: 50%
+  &:hover
+    border: 1px solid $brand-primary
+    background: #fff
+    text-decoration: none
+    +box_shadow(0px, 8px, 16px, 1px, rgba(0, 0, 0, 0.2))
+    a, a span, a .fas
+      color: $brand-primary
+    .click_here
+      color: #fff
+      background: $brand-primary

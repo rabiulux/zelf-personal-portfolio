@@ -1,0 +1,8 @@
+gem install sass
+
+
+gem install bourbon
+gem install bitters
+gem install neat
+
+sass --watch sass\style.sass:css\style.css

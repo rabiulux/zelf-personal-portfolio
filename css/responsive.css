@@ -1,0 +1,78 @@
+@media screen and (max-width: 991px){
+  .grid .element-item{
+    margin: 10px;
+  }
+  .statistics .item{
+    margin-bottom: 30px;
+  }
+  .statistics .third_child, .statistics .last_child{
+    margin-bottom: 0px
+  }
+  .hero .content h1{
+    font-size: 36px
+  }
+  .call_to_action{
+    padding: 10px 5px;
+  }
+  .call_to_action a{
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+
+@media screen and (max-width: 767px){
+  .title{
+    font-size: 36px;
+    margin: 0px 0px 20px 0px;
+  }
+
+  .section_padding{
+    padding: 80px 0px
+  }
+  .logo1{
+    display: none;
+  }
+  .logo2{
+    display: block;
+  }
+  #hero p{
+    width: 95%;
+  }
+
+  .about .about_iamge{
+    border: none;
+  }
+  .grid .element-item{
+    margin: 8px;
+  }
+  .filter .container{
+    padding-left: 0px;
+    padding-right: 5px;
+  }
+  .statistics .item:not(.last_child){
+    margin-bottom: 30px;
+  }
+  .call_to_action a{
+    font-size: 20px;
+    text-align: center;
+  }
+  .hero .content h1{
+    font-size: 24px
+  }
+  .hero .scroll_down{
+    margin-top: 30px
+  }
+  .hero .scroll_down i{
+    margin-top: 0
+  }
+  section#blog{
+    padding-top: 120px;
+  }
+}
+
+@media screen and (max-width: 480px){
+  p {
+    font-size: 0.85em;
+  }
+}
